@@ -55,7 +55,7 @@ void loop() {
         if (c == '\n'){
           if (currentLine.length()==0){
             client.println("HTTP/1.1 200 OK");
-            client.println("Content-type:text/html");
+            client.println("Content-Type: application/json");
             client.println("Connection: close");
             client.println();
             break;
@@ -94,17 +94,4 @@ void loop() {
     Serial.println("Client disconnected.");
 
   }
-
-  // if (Serial.available() > 0) {
-  //   user_input = Serial.read();
-  //   if (user_input=='a') {
-  //     digitalWrite(LED_PIN, HIGH);
-  //   } else if (user_input=='b') {
-  //     digitalWrite(LED_PIN, LOW);
-  //   } else if (user_input=='c') {
-  //     digitalWrite(LOCKDOOR_PIN, HIGH);
-  //     delay(3000);
-  //     digitalWrite(LOCKDOOR_PIN, LOW);
-  //   }
-  // }
 }
